@@ -10,11 +10,11 @@ export default function ContactSection(){
           <Mail className="h-5 w-5 text-purple-500" />
           <h2 className="text-2xl font-semibold">Get In Touch</h2>
         </div>
-        <h3 className="text-3xl md:text-4xl font-bold mb-10">Let's Work Together</h3>
+        <h3 className="text-3xl md:text-4xl font-bold mb-10">{`Let's`} Work Together</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           <div>
             <p className="text-gray-300 mb-6">
-              I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              {`I'm`} always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               Feel free to reach out using the contact form or through my social media profiles.
             </p>
             <div className="space-y-4">

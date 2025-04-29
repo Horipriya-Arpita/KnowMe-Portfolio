@@ -3,11 +3,7 @@ import { Button } from "@mui/material";
 import { User } from "lucide-react";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
-import { Award } from "lucide-react";
-import JourneyMap from "@/components/journey-map";
-import { Heart } from "lucide-react";
-import MoodBoard from "@/components/mood-board";
-
+import Image from "next/image";
 
 export default function AboutSection(){
     return (
@@ -28,7 +24,7 @@ export default function AboutSection(){
             to collaborative development and building intelligent, high-impact products.
             </p>
             <p className="text-gray-300 mb-6">
-              I'm constantly learning and exploring new technologies to stay at the forefront of the industry. My goal
+              {`I'm `}constantly learning and exploring new technologies to stay at the forefront of the industry. My goal
               is to create digital experiences that not only look great but also provide real value to users.
             </p>
             <Link href="/chat">
@@ -40,8 +36,10 @@ export default function AboutSection(){
           <div className="md:w-1/2 flex items-center justify-center">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center">
               <div className="w-60 h-60 md:w-72 md:h-72 rounded-full bg-navy-900 flex items-center justify-center">
-                <img
-                  src="/placeholder.svg?height=250&width=250"
+                <Image
+                  src="/project.jpg"
+                  width={200}
+                  height={200}
                   alt="Profile"
                   className="rounded-full w-56 h-56 md:w-64 md:h-64 object-cover"
                 />

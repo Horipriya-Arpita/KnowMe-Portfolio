@@ -1,6 +1,5 @@
 "use client";
 import CompetitionCard from "@/components/competition-card";
-import { Button } from "@mui/material";
 import { Award } from "lucide-react";
 
 export default function CompetitionSection() {

@@ -1,5 +1,6 @@
 "use client"
 
+import Image from "next/image"
 import type React from "react"
 
 import { useState, useEffect } from "react"
@@ -8,6 +9,13 @@ interface EasterEggProps {
   triggerWord: string
   children: React.ReactNode
 }
+
+declare global {
+  interface Window {
+    checkEasterEgg: () => void
+  }
+}
+
 
 export default function EasterEgg({ triggerWord, children }: EasterEggProps) {
   const [isVisible, setIsVisible] = useState(false)
@@ -50,6 +58,7 @@ export default function EasterEgg({ triggerWord, children }: EasterEggProps) {
 
         if (konamiIndex === konamiCode.length) {
           setKonamiActivated(true)
+          console.log(konamiActivated);
           setCatMode(true)
           localStorage.setItem("portfolioCatMode", "activated")
           konamiIndex = 0
@@ -74,7 +83,7 @@ export default function EasterEgg({ triggerWord, children }: EasterEggProps) {
     return () => {
       window.removeEventListener("keydown", keyHandler)
     }
-  }, [])
+  }, [konamiActivated])
 
   // Function to check for trigger word in chat
   const checkForTrigger = (message: string) => {
@@ -84,10 +93,10 @@ export default function EasterEgg({ triggerWord, children }: EasterEggProps) {
     }
   }
 
-  // Expose the check function to window so the chat component can use it
+  //Expose the check function to window so the chat component can use it
   useEffect(() => {
-    ;(window as any).checkEasterEgg = checkForTrigger
-  }, [triggerWord])
+    window.checkEasterEgg()
+  }, [triggerWord, checkForTrigger])
 
   if (!isVisible && !catMode) {
     return null
@@ -115,7 +124,7 @@ export default function EasterEgg({ triggerWord, children }: EasterEggProps) {
 
         {catMode ? (
           <div className="text-center">
-            <img src="/placeholder.svg?height=300&width=300" alt="Cat" className="mx-auto mb-4 rounded-lg" />
+            <Image src="/placeholder.svg?height=300&width=300" alt="Cat" className="mx-auto mb-4 rounded-lg" />
             <p className="text-lg mb-4">Everything is better with cats! Enjoy your browsing with feline friends.</p>
             <button
               onClick={() => {

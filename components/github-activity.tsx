@@ -47,6 +47,7 @@ export default function GitHubActivity() {
   const generateContributions = () => {
     const contributions: ContributionDay[] = []
     const today = new Date()
+    setRepos(repos);
 
     for (let i = 0; i < 91; i++) {
       const date = new Date(today)
@@ -88,7 +89,7 @@ export default function GitHubActivity() {
 
   useEffect(() => {
     setContributions(generateContributions())
-  }, [])
+  }, [generateContributions])
 
   const getContributionColor = (level: number) => {
     switch (level) {

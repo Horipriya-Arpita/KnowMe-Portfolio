@@ -1,6 +1,6 @@
 'use client'
 import GitHubActivity from "@/components/github-activity";
-import { Button } from "@mui/material";
+// import { Button } from "@mui/material";
 import { GitBranch } from "lucide-react";
 
 export default function GithubSection(){

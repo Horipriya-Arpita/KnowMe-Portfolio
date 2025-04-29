@@ -1,44 +1,4 @@
-// "use client"
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
-// import { ArrowUpRight } from "lucide-react"
 
-// interface ProjectCardProps {
-//   title: string
-//   description: string
-//   tags: string[]
-//   imageUrl: string
-// }
-
-// export default function ProjectCard({ title, description, tags, imageUrl }: ProjectCardProps) {
-//   return (
-//     <Card className="bg-navy-900/50 border-navy-800 overflow-hidden hover:border-purple-500/30 transition-all duration-300">
-//       <div className="relative overflow-hidden h-48">
-//         <img
-//           src={imageUrl || "/placeholder.svg"}
-//           alt={title}
-//           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-//         />
-//       </div>
-//       <CardContent className="p-6">
-//         <h4 className="text-xl font-semibold mb-2">{title}</h4>
-//         <p className="text-gray-300 mb-4">{description}</p>
-//         <div className="flex flex-wrap gap-2">
-//           {tags.map((tag, index) => (
-//             <span key={index} className="text-xs bg-navy-800 text-gray-300 px-2 py-1 rounded-md">
-//               {tag}
-//             </span>
-//           ))}
-//         </div>
-//       </CardContent>
-//       <div className="p-6 pt-0 flex justify-end">
-//         <button className="text-purple-400 hover:text-purple-300 flex items-center text-sm font-medium">
-//           View Project <ArrowUpRight className="ml-1 h-3 w-3" />
-//         </button>
-//       </div>
-//     </Card>
-//   )
-// }
 "use client";
 
 import { useState } from "react";

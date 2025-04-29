@@ -1,5 +1,6 @@
 "use client"
 import { MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 interface WorkExperienceProps {
   company: string
@@ -28,7 +29,7 @@ export default function WorkExperience({
         <div className="relative z-10">
           <div className="w-8 h-8 rounded-full bg-navy-800 border-2 border-purple-500 flex items-center justify-center">
             {logo ? (
-              <img src={logo || "/placeholder.svg"} alt={company} className="w-4 h-4" />
+              <Image src={logo || "/placeholder.svg"} alt={company} className="w-4 h-4" />
             ) : (
               <div className="w-3 h-3 rounded-full bg-purple-500"></div>
             )}

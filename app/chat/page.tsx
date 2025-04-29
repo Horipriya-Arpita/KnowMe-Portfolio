@@ -48,9 +48,10 @@ export default function ChatPage() {
     // Check for easter egg trigger
     if (input.toLowerCase().includes("rupkotha")) {
       setShowRupkothaStory(true)
+      console.log(showRupkothaStory);
       // If window.checkEasterEgg exists (set by EasterEgg component), call it
-      if ((window as any).checkEasterEgg) {
-        ;(window as any).checkEasterEgg(input)
+      if (window.checkEasterEgg) {
+        ;window.checkEasterEgg()
       }
     }
 
@@ -101,7 +102,7 @@ export default function ChatPage() {
               Back to Portfolio
             </Button>
           </Link>
-          <h1 className="text-2xl font-bold ml-4">Chat with John's AI Assistant</h1>
+          <h1 className="text-2xl font-bold ml-4">{`Chat with Horipriya's AI Assistant`}</h1>
         </div>
 
         <div className="flex-1 overflow-y-auto mb-4 bg-navy-900/50 rounded-lg p-4 border border-navy-800">
@@ -175,19 +176,19 @@ export default function ChatPage() {
           </p>
           <p>
             By day, John crafted websites and applications that amazed clients and users alike. But few knew of his
-            secret midnight adventures, when the screen's glow illuminated his face as he worked on a mysterious
+          secret midnight adventures, when the {`screen's`} glow illuminated his face as he worked on a mysterious
             project.
           </p>
           <p>
-            This project wasn't for money or fame. It was a digital realm where art and code merged—where music notes
+            This project {`wasn't`} for money or fame. It was a digital realm where art and code merged—where music notes
             became visual patterns and drawings transformed into interactive experiences.
           </p>
           <p>
             Legend says that those who discover this hidden story might find traces of this magical project somewhere in
-            John's portfolio. Perhaps in the spaces between pixels or in the whispers of algorithms...
+            {`Arpita's`} portfolio. Perhaps in the spaces between pixels or in the whispers of algorithms...
           </p>
           <p className="italic text-purple-300">
-            To continue your journey, look for the stars that don't belong, and press the keys that heroes know.
+            To continue your journey, look for the stars that {`don't`} belong, and press the keys that heroes know.
           </p>
         </div>
       </EasterEgg>
