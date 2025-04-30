@@ -8,8 +8,6 @@ import SkillSection from "./sections/SkillSection"
 import CompetitionSection from "./sections/CompetitionSection"
 import ProjectSection from "./sections/ProjectSection"
 import FloatingChat from "@/components/floating-chat"
-// import GithubSection from "./sections/GithubSection"
-// import HobbiesSection from "./sections/HobbiesSection"
 import FooterSection from "./sections/FooterSection"
 import ContactSection from "./sections/ContactSection"
 
@@ -27,10 +25,6 @@ export default function HomePage() {
       <WorkSection/>
 
       <SkillSection/>
-      
-      {/* <HobbiesSection/> */}
-
-      {/* <GithubSection/> */}
        
       <ProjectSection/>
 
