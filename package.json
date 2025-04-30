@@ -11,6 +11,8 @@
   "dependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
+    "@langchain/core": "^0.3.50",
+    "@langchain/google-genai": "^0.2.5",
     "@mui/material": "^7.0.2",
     "lightningcss": "^1.29.3",
     "lucide-react": "^0.503.0",

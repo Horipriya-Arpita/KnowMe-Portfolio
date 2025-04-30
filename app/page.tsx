@@ -7,6 +7,7 @@ import WorkSection from "./sections/WorkSection"
 import SkillSection from "./sections/SkillSection"
 import CompetitionSection from "./sections/CompetitionSection"
 import ProjectSection from "./sections/ProjectSection"
+import FloatingChat from "@/components/floating-chat"
 // import GithubSection from "./sections/GithubSection"
 // import HobbiesSection from "./sections/HobbiesSection"
 import FooterSection from "./sections/FooterSection"
@@ -17,6 +18,7 @@ export default function HomePage() {
     <main className="relative min-h-screen overflow-hidden bg-gradient-to-b from-navy-950 to-black text-white">
       <GridBackground />
       <GradientBlur />
+      <FloatingChat />
 
       <HeroSection/>
 

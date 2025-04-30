@@ -27,11 +27,11 @@ export default function AboutSection(){
               {`I'm `}constantly learning and exploring new technologies to stay at the forefront of the industry. My goal
               is to create digital experiences that not only look great but also provide real value to users.
             </p>
-            <Link href="/chat">
+            
               <Button className="bg-navy-900 border-3 border-purple-500/30 hover:bg-navy-800 text-white">
                 Chat With Me <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
-            </Link>
+            
           </div>
           <div className="md:w-1/2 flex items-center justify-center">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center">
@@ -48,24 +48,7 @@ export default function AboutSection(){
           </div>
         </div>
 
-        {/* Journey Map */}
-        {/* <div className="mt-16">
-          <h4 className="text-xl font-semibold mb-6 flex items-center">
-            <Award className="mr-2 h-5 w-5 text-purple-500" />
-            My Journey
-          </h4>
-          <JourneyMap />
-        </div> */}
-
-        {/* Mood Board */}
-        {/* <div className="mt-16">
-          <h4 className="text-xl font-semibold mb-6 flex items-center">
-            <Heart className="mr-2 h-5 w-5 text-purple-500" />
-            My Aesthetic
-          </h4>
-          <MoodBoard />
-        </div> */}
-      </section>
+        </section>
         </>
     )
 }
