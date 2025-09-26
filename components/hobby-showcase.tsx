@@ -3,6 +3,7 @@
 import { useState } from "react"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Palette, Music } from "lucide-react"
+import Image from "next/image"
 
 interface ArtworkItem {
   title: string
@@ -78,11 +79,21 @@ export default function HobbyShowcase() {
     <div className="bg-navy-900/50 rounded-lg border border-navy-800 p-6">
       <Tabs defaultValue="artwork" className="w-full">
         <TabsList className="grid w-full grid-cols-2 mb-8">
-          <TabsTrigger value="artwork" onClick={() => setActiveTab("artwork")} className="flex items-center gap-2">
+          <TabsTrigger value="artwork" 
+          onClick={() => {
+            setActiveTab("artwork")
+            console.log(activeTab);
+          }} 
+            className="flex items-center gap-2">
             <Palette className="h-4 w-4" />
             <span>Artwork</span>
           </TabsTrigger>
-          <TabsTrigger value="music" onClick={() => setActiveTab("music")} className="flex items-center gap-2">
+          <TabsTrigger value="music" 
+          onClick={() => {
+            setActiveTab("music")
+            console.log(activeTab);
+          }}
+          className="flex items-center gap-2">
             <Music className="h-4 w-4" />
             <span>Music</span>
           </TabsTrigger>
@@ -95,7 +106,7 @@ export default function HobbyShowcase() {
                 key={index}
                 className="bg-navy-800 rounded-lg overflow-hidden border border-navy-700 hover:border-purple-500/30 transition-all duration-300"
               >
-                <img
+                <Image
                   src={artwork.imageUrl || "/placeholder.svg"}
                   alt={artwork.title}
                   className="w-full h-48 object-cover"

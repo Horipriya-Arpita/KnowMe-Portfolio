@@ -1,44 +1,4 @@
-// "use client"
-// import Card from '@mui/material/Card';
-// import CardContent from '@mui/material/CardContent';
-// import { ArrowUpRight } from "lucide-react"
 
-// interface ProjectCardProps {
-//   title: string
-//   description: string
-//   tags: string[]
-//   imageUrl: string
-// }
-
-// export default function ProjectCard({ title, description, tags, imageUrl }: ProjectCardProps) {
-//   return (
-//     <Card className="bg-navy-900/50 border-navy-800 overflow-hidden hover:border-purple-500/30 transition-all duration-300">
-//       <div className="relative overflow-hidden h-48">
-//         <img
-//           src={imageUrl || "/placeholder.svg"}
-//           alt={title}
-//           className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
-//         />
-//       </div>
-//       <CardContent className="p-6">
-//         <h4 className="text-xl font-semibold mb-2">{title}</h4>
-//         <p className="text-gray-300 mb-4">{description}</p>
-//         <div className="flex flex-wrap gap-2">
-//           {tags.map((tag, index) => (
-//             <span key={index} className="text-xs bg-navy-800 text-gray-300 px-2 py-1 rounded-md">
-//               {tag}
-//             </span>
-//           ))}
-//         </div>
-//       </CardContent>
-//       <div className="p-6 pt-0 flex justify-end">
-//         <button className="text-purple-400 hover:text-purple-300 flex items-center text-sm font-medium">
-//           View Project <ArrowUpRight className="ml-1 h-3 w-3" />
-//         </button>
-//       </div>
-//     </Card>
-//   )
-// }
 "use client";
 
 import { useState } from "react";
@@ -112,24 +72,21 @@ export default function ProjectCard({
       />
 
       <div
-        className="relative rounded-xl overflow-hidden transition-all duration-500 ease-out preserve-3d"
+        className="relative glow-border overflow-hidden transition-all duration-500 ease-out preserve-3d"
         style={{
           transform: isHovered
             ? "translateY(-10px) rotateX(35deg)"
             : "translateY(0) rotateZ(0deg)",
-          boxShadow: isHovered
-            ? "0 0 25px 5px rgba(101, 0, 255, 0.2), 0 0 10px 1px rgba(101, 0, 255, 0.15)"
-            : "0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)",
         }}
       >
-        <div className="bg-gradient-to-br from-gray-900 to-gray-800 border border-gray-800">
+        <div className="glow-border-content bg-gradient-to-br from-card to-card/90">
           {/* GitHub link pill */}
           <div className="relative px-6 pt-6">
             <Link
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="absolute top-4 right-4 inline-flex items-center px-3 py-1 rounded-full bg-black text-xs text-gray-300 hover:text-white transition-colors duration-300"
+              className="absolute top-4 right-4 inline-flex items-center px-3 py-1 rounded-full bg-muted text-xs text-muted-foreground hover:text-foreground transition-colors duration-300"
             >
               <Github size={12} className="mr-1" />
               GitHub
@@ -159,11 +116,11 @@ export default function ProjectCard({
           {/* Content */}
           <div className="px-6 pb-6">
             {/* Title */}
-            <h3 className="text-xl font-bold text-white mb-2">{title}</h3>
+            <h3 className="text-xl font-bold text-foreground mb-2">{title}</h3>
 
             {/* Description */}
             <p
-              className="text-gray-400 mb-4 text-sm leading-relaxed"
+              className="text-muted-foreground mb-4 text-sm leading-relaxed"
               dangerouslySetInnerHTML={{ __html: description }}
             />
 
@@ -171,10 +128,10 @@ export default function ProjectCard({
             <div className="flex justify-between mb-6">
               {features.map((feature, index) => (
                 <div key={index} className="flex flex-col items-center">
-                  <div className="w-10 h-10 rounded-full bg-gray-800 border border-gray-700 flex items-center justify-center text-gray-300 transition-all duration-300 hover:text-purple-400 hover:border-purple-500">
+                  <div className="w-10 h-10 rounded-full bg-muted border border-border flex items-center justify-center text-muted-foreground transition-all duration-300 hover:text-primary hover:border-primary">
                     {getIcon(feature.icon)}
                   </div>
-                  <span className="text-xs text-gray-500 mt-1">
+                  <span className="text-xs text-muted-foreground/70 mt-1">
                     {feature.label}
                   </span>
                 </div>
@@ -186,7 +143,7 @@ export default function ProjectCard({
               href={githubUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center text-sm text-purple-400 hover:text-purple-300 transition-colors duration-300"
+              className="inline-flex items-center text-sm text-primary hover:text-primary/80 transition-colors duration-300"
             >
               Check out GitHub repo
               <ArrowRight

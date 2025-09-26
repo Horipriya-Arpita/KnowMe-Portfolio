@@ -1,5 +1,7 @@
 "use client"
 
+import Image from "next/image"
+
 interface MoodItem {
     type: "image" | "color" | "text"
     content: string
@@ -43,7 +45,7 @@ interface MoodItem {
             className={`${getSizeClasses(item.size || "small")} rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-lg`}
           >
             {item.type === "image" && (
-              <img src={item.content || "/placeholder.svg"} alt="Mood" className="w-full h-full object-cover" />
+              <Image src={item.content || "/placeholder.svg"} alt="Mood" className="w-full h-full object-cover" />
             )}
             {item.type === "color" && <div className="w-full h-full" style={{ backgroundColor: item.content }}></div>}
             {item.type === "text" && (

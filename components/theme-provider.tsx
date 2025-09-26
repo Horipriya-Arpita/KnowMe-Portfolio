@@ -26,9 +26,7 @@ const ThemeProviderContext = createContext(initialState)
 export function ThemeProvider({
   children,
   defaultTheme = "system",
-  attribute = "data-theme",
   enableSystem = true,
-  disableTransitionOnChange = false,
 }: ThemeProviderProps) {
   const [theme, setTheme] = useState<Theme>(defaultTheme)
 

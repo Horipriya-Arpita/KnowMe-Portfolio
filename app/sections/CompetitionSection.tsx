@@ -1,6 +1,5 @@
 "use client";
 import CompetitionCard from "@/components/competition-card";
-import { Button } from "@mui/material";
 import { Award } from "lucide-react";
 
 export default function CompetitionSection() {
@@ -19,55 +18,30 @@ export default function CompetitionSection() {
         </h3>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* <CompetitionCard
-            title="ICPC Orbitax SUST SWE Technovent"
-            date="January 2023"
-            location="IICT, SUST"
-            achievement="Participant"
-            description="Developed an AI-powered solution for sustainable urban planning that won first place among 200+ international teams."
-          /> */}
+          
+          <CompetitionCard
+            title="ICPC Orbitax SUST SWE Technovent 2023"
+            description="Participated in ICPC Orbitax SUST SWE Technovent Powered by DSI,
+            Orbitax and Cefalo. I was a dedicated volunteer at this event."
+          />
+          <CompetitionCard
+            title="National Girls' Programming Contest 2022"
+            description="Participated in 6th National Girls' Programming Contest NGPC 2022
+            hosted by Daffodil International University, Powered By BDosn, ICT
+            Bangladesh."
+          />
 
-          {/* <CompetitionCard
+          <CompetitionCard
             title="Ada lovelace Programming Competition 2022"
-            date="July 2022"
-            location="University of Asia Pacific, Dhaka"
-            achievement="Participant"
-            description="Delivered a keynote presentation on 'The Future of Frontend Development' to an audience of 500+ industry professionals."
-          /> */}
+            description="Participated in Ada lovelace Programming Competition 2022 hosted by
+            University of Asia Pacific, Dhaka, organized by BDosn."
+          />
 
-          {/* <CompetitionCard
-            title="National Girls' Programming Contest NGPC 2022"
-            date="April 2022"
-            location="DIU, Dhaka"
-            achievement="Participant"
-            description="Created an accessibility-focused web application that helps visually impaired users navigate websites more effectively."
-          /> */}
-
-          {/* <CompetitionCard
+          <CompetitionCard
             title="BdApps National Hackathon 2022"
-            date="March 2022"
-            location="SUST, Sylhet"
-            achievement="Top 5"
-            description="Participated in workshops and networking events focused on emerging technologies and industry best practices."
-          /> */}
-
-          <CompetitionCard
-            title="National High School Programming Contest 2016"
-            description="Solved over 3500 problems in online judges."
-          />
-          <CompetitionCard
-            title="National High School Programming Contest 2016"
-            description="Solved over 3500 problems in online judges."
-          />
-
-          <CompetitionCard
-            title="National High School Programming Contest 2016"
-            description="Solved over 3500 problems in online judges."
-          />
-
-          <CompetitionCard
-            title="National High School Programming Contest 2016"
-            description="Solved over 3500 problems in online judges."
+            description="Participated in BdApps National Hackathon 2022 Regional Round in Sylhet,
+            Organized by SWE Society, SUST, Powered by Robi. Our idea got short-listed
+            among numerous teams."
           />
         </div>
       </section>
