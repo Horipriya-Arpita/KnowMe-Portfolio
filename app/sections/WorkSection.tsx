@@ -20,19 +20,32 @@ export default function WorkSection(){
 
         <div className="max-w-4xl mx-auto">
           <WorkExperience
-            company="Luminous Lab Ltd."
-            position="Software Engineer, Intern"
-            duration="Dec 2024 - Present"
-            location="Dhaka, Bangladesh"
+            company="Sigmoix AI"
+            position="AI R&D Engineer, Intern"
+            duration="Sep 2025 - Present"
+            location="Remote"
             description={[
-              "Developed point activity and referral features for a Shopify app using Remix, Prisma, and MySQL during onboarding to Shopify app development.",
-              "Built Bangla AI voice agent using LangChain, Flowise, and vector DBs, improved UI and backend for contact and tag management in an AI-driven voice platform.",
-              "Designed and implemented frontend interfaces for a Next.js & TypeScript web template, and integrated REST APIs for dynamic data rendering.",
+              "Developed large-scale web scraping pipelines to extract and structure product data (8K+ items) from e-commerce sites using Crawl4AI, Firecrawl, and Selenium.",
+              "Implemented multi-threaded scraping with dynamic user-agent rotation, reducing data extraction time from 1 hour to ~30 minutes.",
+              "Designed and optimized retrieval pipelines integrating BM25, FAISS, and Hybrid + Reranking strategies; achieved significant improvements in precision and response relevance.",
+              "Fine-tuned Gemma 270M SLM using LoRA on 25K+ training examples for product search and query understanding.",
+              "Built and evaluated embedding fine-tuning datasets (100K+ query–document pairs) with augmentation and hard negatives for retrieval optimization.",
+              "Explored advanced RAG, Agentic RAG, and RAPTOR frameworks to enhance semantic retrieval and LLM-driven search performance.",
             ]}
           />
-          
 
-          
+          <WorkExperience
+            company="Luminous Lab"
+            position="Software Engineer, Intern"
+            duration="Dec 2024 - May 2025"
+            location="Dhaka, Bangladesh"
+            description={[
+              "Built Shopify apps using Remix, Polaris, and Prisma, enabling user registration, referral systems, and seamless REST API integrations.",
+              "Enhanced VoiceERP, developing Flowise-based AI voice workflows, Bangla conversational prompts, and optimizing calling-based AI interactions for natural dialogue.",
+              "Migrated Flowise functionalities to LangChain.js, implementing custom LLM chains, RAG with ChromaDB and PDF knowledge-based Q&A APIs for contextual AI chat.",
+              "Contributed to Beige and Carlo platforms by integrating frontend dashboards with backend APIs, ensuring smooth data flow and consistent UI behavior.",
+            ]}
+          />
         </div>
       </section>
         </>
