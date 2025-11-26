@@ -7,14 +7,18 @@ import WorkExperience from "@/components/work-experience";
 export default function WorkSection(){
     return (
         <>
-        <section id="experience" className="relative container mx-auto px-4 py-20">
-        <div className="flex items-center gap-2 mb-6">
-          <Briefcase className="h-5 w-5 text-purple-500" />
-          <h2 className="text-2xl font-semibold">Work Experience</h2>
+        <section id="work" className="relative container mx-auto px-4 py-20">
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Briefcase className="h-8 w-8 text-purple-500" />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">Work Experience</h2>
+          </div>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            My Professional Journey
+          </p>
         </div>
-        <h3 className="text-3xl md:text-4xl font-bold mb-10">My Professional Journey</h3>
 
-        <div className="ml-4">
+        <div className="max-w-4xl mx-auto">
           <WorkExperience
             company="Luminous Lab Ltd."
             position="Software Engineer, Intern"
@@ -26,6 +30,7 @@ export default function WorkSection(){
               "Designed and implemented frontend interfaces for a Next.js & TypeScript web template, and integrated REST APIs for dynamic data rendering.",
             ]}
           />
+          
 
           
         </div>

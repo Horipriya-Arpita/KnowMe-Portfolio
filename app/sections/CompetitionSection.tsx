@@ -9,15 +9,17 @@ export default function CompetitionSection() {
         id="competitions"
         className="relative container mx-auto px-4 py-20"
       >
-        <div className="flex items-center gap-2 mb-6">
-          <Award className="h-5 w-5 text-purple-500" />
-          <h2 className="text-2xl font-semibold">Competitions & Events</h2>
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Award className="h-8 w-8 text-purple-500" />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">Competitions</h2>
+          </div>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Achievements & Participations
+          </p>
         </div>
-        <h3 className="text-3xl md:text-4xl font-bold mb-10">
-          My Achievements & Participations
-        </h3>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
           
           <CompetitionCard
             title="ICPC Orbitax SUST SWE Technovent 2023"

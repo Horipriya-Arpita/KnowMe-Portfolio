@@ -1,6 +1,6 @@
 import GridBackground from "@/components/grid-background"
 import GradientBlur from "@/components/gradient-blur"
-// import Navbar from "@/components/Navbar"
+import Navbar from "@/components/Navbar"
 import HeroSection from "./sections/HeroSection"
 import AboutSection from "./sections/AboutSection"
 import WorkSection from "./sections/WorkSection"
@@ -14,7 +14,7 @@ import ContactSection from "./sections/ContactSection"
 export default function HomePage() {
   return (
     <main className="relative min-h-screen overflow-hidden text-foreground bg-background transition-colors duration-300">
-      {/* <Navbar/> */}
+      <Navbar/>
       <GridBackground />
       <GradientBlur />
       <FloatingChat />

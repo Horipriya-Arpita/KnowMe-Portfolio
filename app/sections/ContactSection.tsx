@@ -1,19 +1,22 @@
 'use client'
-import { Button } from "@mui/material";
 import { Mail } from "lucide-react";
 
 export default function ContactSection(){
     return (
         <>
         <section id="contact" className="relative container mx-auto px-4 py-20">
-        <div className="flex items-center gap-2 mb-6">
-          <Mail className="h-5 w-5 text-primary" />
-          <h2 className="text-2xl font-semibold">Get In Touch</h2>
+        <div className="text-center mb-16">
+          <div className="flex items-center justify-center gap-2 mb-4">
+            <Mail className="h-8 w-8 text-purple-500" />
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold">Get In Touch</h2>
+          </div>
+          <p className="text-lg md:text-xl text-muted-foreground max-w-3xl mx-auto">
+            Want to collaborate? Let&apos;s talk!
+          </p>
         </div>
-        <h3 className="text-3xl md:text-4xl font-bold mb-10">{`Let's`} Work Together</h3>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           <div>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground mb-6 text-base md:text-lg leading-relaxed">
               {`I'm`} always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               Feel free to reach out using the contact form or through my social media profiles.
             </p>
@@ -92,9 +95,9 @@ export default function ContactSection(){
               </div>
             </div>
             <div className="glow-button w-full">
-              <Button className="glow-button-content w-full bg-primary/10 hover:bg-primary/20 text-foreground py-6 border-0">
+              <button className="glow-button-content w-full">
                 Send Message
-              </Button>
+              </button>
             </div>
           </form>
           </div>
